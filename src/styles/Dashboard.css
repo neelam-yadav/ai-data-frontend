@@ -1,0 +1,145 @@
+.dashboard {
+  padding: 20px;
+}
+
+.pipeline-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  background: #f7f9fc;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.create-card {
+  cursor: pointer;
+  background: #e8f4ff;
+  border: 1px dashed #007bff;
+  text-align: center;
+  color: #007bff;
+  transition: background 0.2s ease;
+}
+
+.create-card:hover {
+  background: #d0eaff;
+}
+
+.create-card .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  height: 150px;
+}
+
+
+.card-footer .btn.edit-btn {
+  background: #007bff !important;
+  color: white;
+}
+
+.card-footer .btn.run-btn {
+  background: #1abc9c !important;
+  color: white;
+}
+
+.card-footer .btn.delete-btn {
+  background: #ff4d4d !important;
+  color: white;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Default Tooltip Styling */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  
+  /* ✅ Fix: Allow dynamic width instead of fixed width */
+  white-space: nowrap; /* Prevents breaking into multiple lines */
+  max-width: 300px; /* Optional: Prevents tooltip from becoming too wide */
+}
+
+/* Fix for tooltips near the card boundary (like Delete button) */
+.tooltip-left .tooltip-text {
+  left: auto;
+  right: 0;
+  transform: translateX(0%);
+}
+
+.tooltip-right .tooltip-text {
+  left: 0;
+  transform: translateX(0%);
+}
+
+/* Show Tooltip on Hover */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+

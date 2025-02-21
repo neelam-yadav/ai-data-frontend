@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app {
+  display: flex;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+  width: calc(100% - 200px);
+}
